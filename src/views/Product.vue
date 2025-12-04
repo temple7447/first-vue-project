@@ -1,6 +1,6 @@
 <script setup>
 import ProductCard from '@/components/ProductCard.vue'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 
 
 
@@ -18,7 +18,9 @@ const fetchDate = async () => {
     }
 }
 
-fetchDate()
+onMounted(() => {
+    fetchDate()
+})
 
 </script>
 
